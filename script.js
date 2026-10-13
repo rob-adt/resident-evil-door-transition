@@ -2,6 +2,13 @@
 const hoverSound = document.getElementById("hoverSound");
 const selectSound = document.getElementById("selectSound");
 
+document.addEventListener("click", function startmusic() {
+    const music = document.getElementById("bgmusic");
+    music.play();
+
+    document.removeEventListener("click", startmusic);
+});
+
 button.addEventListener("mouseenter", function () {
     hoverSound.currentTime = 0;
         hoverSound.play();
